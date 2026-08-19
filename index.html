@@ -1,0 +1,1148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Happy Birthday Beboo</title>
+
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
+</head>
+
+
+<body>
+  <!-- =====================================
+     BACKGROUND MUSIC
+====================================== -->
+
+<audio
+    id="backgroundMusic"
+    src="music/birthday-song.mp3"
+    loop
+    preload="auto"
+>
+</audio>
+
+    <!-- =========================================
+         LOADING SCREEN
+    ========================================== -->
+
+    <div id="loadingScreen">
+
+        <div class="loading-heart">
+            ♥
+        </div>
+
+        <p class="loading-text">
+            Made with love...
+        </p>
+
+    </div>
+
+
+
+    <!-- =========================================
+         MAIN APP
+    ========================================== -->
+
+    <main id="app">
+
+
+        <!-- =====================================
+             BIRTHDAY SECTION
+        ====================================== -->
+
+        <section
+            class="intro-screen"
+            id="birthdaySection"
+        >
+
+            <div class="glow glow-one"></div>
+
+            <div class="glow glow-two"></div>
+
+
+            <canvas
+                id="fireworksCanvas"
+            ></canvas>
+
+
+            <div class="intro-content">
+
+                <p class="small-text">
+                    A little surprise for you...
+                </p>
+
+
+                <div class="heart">
+                    ♥
+                </div>
+
+
+                <h1 id="birthdayTitle">
+
+                    <span id="birthdayText"></span>
+
+                    <span class="cursor">
+                        |
+                    </span>
+
+                </h1>
+
+
+                <p
+                    id="birthdaySubtitle"
+                    class="hint"
+                >
+                    Made for  love💖
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =====================================
+             LOVE LETTER SECTION
+        ====================================== -->
+
+        <section
+            class="love-letter-section"
+            id="loveLetterSection"
+        >
+
+
+            <div class="letter-background-glow"></div>
+
+
+            <div class="letter-heading">
+
+                <p>
+                    There is something
+                    special for you...
+                </p>
+
+                <h2>
+                    Open My Heart 💜
+                </h2>
+
+            </div>
+
+
+
+            <!-- =================================
+                 ENVELOPE
+            ================================== -->
+
+            <div
+                class="envelope-container"
+                id="envelopeContainer"
+            >
+
+
+                <div class="envelope">
+
+
+                    <!-- Letter -->
+
+                    <div class="letter">
+
+                        <div class="letter-content">
+
+                            <span class="letter-heart">
+                                ♥
+                            </span>
+
+                            <h3>
+                                To My Beautiful Love ❤️
+                            </h3>
+
+                            <p>
+                                Happy Birthday to the
+                                most special person in
+                                my life.
+                            </p>
+
+                            <p>
+                                You make my world more
+                                beautiful just by being
+                                a part of it.
+                            </p>
+
+                            <p class="letter-ending">
+                              Miss uhhhh bacchaaa🥹🥹
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <!-- Envelope Back -->
+
+                    <div class="envelope-back"></div>
+
+
+                    <!-- Envelope Front -->
+
+                    <div class="envelope-front">
+
+                        <div class="envelope-heart">
+                            ♥
+                        </div>
+
+                        <p>
+                            Click to Open
+                        </p>
+
+                    </div>
+
+
+                    <!-- Envelope Flap -->
+
+                    <div class="envelope-flap"></div>
+
+
+                </div>
+
+            </div>
+
+
+
+            <p
+                class="letter-hint"
+                id="letterHint"
+            >
+                Tap the envelope 💌
+            </p>
+
+
+        </section>
+
+      <!-- =====================================
+     PHOTO MEMORIES SECTION
+====================================== -->
+
+<section
+    class="memories-section"
+    id="memoriesSection"
+>
+
+    <div class="memories-glow"></div>
+
+
+    <div class="memories-heading">
+
+        <p class="memories-small">
+            Our little memories🤗
+        </p>
+
+        <h2>
+            Every Picture Has A Story
+        </h2>
+
+        <p class="memories-description">
+            Tap the photo to see the next memory...
+        </p>
+
+    </div>
+
+
+    <!-- =================================
+         PHOTO VIEWER
+    ================================== -->
+
+    <div
+        class="photo-viewer"
+        id="photoViewer"
+    >
+
+        <div class="photo-frame">
+
+            <img
+                id="memoryPhoto"
+                src="images/photo1.jpg"
+                alt="Our Memory"
+            >
+
+            <div
+                class="photo-overlay"
+                id="photoOverlay"
+            ></div>
+
+        </div>
+
+
+        <div class="photo-number">
+
+            <span id="currentPhoto">
+                1
+            </span>
+
+            <span>
+                /
+            </span>
+
+            <span>
+                30
+            </span>
+
+        </div>
+
+
+        <p class="photo-tap-hint">
+            Tap the photo 🥰
+        </p>
+
+    </div>
+
+
+    <!-- =================================
+         MEMORY BUTTON
+    ================================== -->
+
+    <button
+        class="memory-next-button"
+        id="memoryNextButton"
+    >
+
+        Next Memory
+        <span>→</span>
+
+    </button>
+
+
+</section>
+      <!-- =====================================
+     SHAYARI SECTION
+====================================== -->
+
+<section
+    class="shayari-section"
+    id="shayariSection"
+>
+
+    <div class="shayari-glow shayari-glow-one"></div>
+
+    <div class="shayari-glow shayari-glow-two"></div>
+
+
+    <div class="shayari-content">
+
+        <div class="shayari-heart">
+            ♥
+        </div>
+
+
+        <p class="shayari-label">
+            just for you, my love...
+        </p>
+
+
+        <h2 class="shayari-title">
+            Kuch Dil Se...
+        </h2>
+
+
+        <div class="shayari-line"></div>
+
+
+        <div
+            class="shayari-text"
+            id="shayariText"
+        >
+
+            <p>
+                Iske liye Sorry Beboo kyoki mujhe shayeri nahi aati he.😭
+            </p>
+
+            <p>
+               Soch raha hu khud se likhu par kuch ban hi nahi raha hai.😭
+            </p>
+
+            <p>
+                Tum meri liye itni Pyarii ho ki tumhare bare me kitna bhi likhu sab kam hai.
+            </p>
+
+            <p>
+                Sorry Beboo meko maaf kar dena😔Par main tumko apni feelings yese words me ni bata paoga. Tum sach me bahut pyari ho...❤️😚
+            </p>
+
+        </div>
+
+
+        <div class="shayari-signature">
+            — Yours, Always ❤️
+        </div>
+
+    </div>
+
+</section>
+      <!-- =====================================
+     FINAL BIRTHDAY MESSAGE
+====================================== -->
+
+<section
+    class="final-message-section"
+    id="finalMessageSection"
+>
+
+    <div class="final-glow final-glow-one"></div>
+    <div class="final-glow final-glow-two"></div>
+
+
+    <!-- Floating hearts -->
+
+    <div class="floating-heart heart-one">♥</div>
+    <div class="floating-heart heart-two">♥</div>
+    <div class="floating-heart heart-three">♥</div>
+    <div class="floating-heart heart-four">♥</div>
+    <div class="floating-heart heart-five">♥</div>
+
+
+    <div class="final-message-content">
+
+
+        <div class="final-small-heart">
+            ♥
+        </div>
+
+
+        <p class="final-label">
+            And finally...
+        </p>
+
+
+        <h2 class="final-title">
+            Happy Birthday
+            <br>
+            <span>Baccha😚💗</span>
+        </h2>
+
+
+        <div class="final-divider"></div>
+
+
+        <p class="final-love-text">
+            I love uhhhh
+            <br>
+            <span>
+                sooooo much
+                Bebooooo
+            </span>
+            🥹❤️
+        </p>
+
+
+        <p class="final-subtext">
+            You will always be
+            my favourite person.
+        </p>
+
+
+        <div class="final-heart">
+            ♥
+        </div>
+
+
+    </div>
+
+</section>
+      <!-- =====================================
+     RELATIONSHIP TIMER SECTION
+====================================== -->
+
+<section
+    class="timer-section"
+    id="timerSection"
+>
+
+    <div class="timer-glow timer-glow-one"></div>
+    <div class="timer-glow timer-glow-two"></div>
+
+
+    <div class="timer-content">
+
+        <div class="timer-heart">
+            ♥
+        </div>
+
+
+        <p class="timer-label">
+            OUR BEAUTIFUL JOURNEY
+        </p>
+
+
+        <h2 class="timer-title">
+            Time Since I Met You
+        </h2>
+
+
+        <p class="timer-start-date">
+            Since 25 April 2024 · 12:00 PM
+        </p>
+
+
+        <div class="timer-divider"></div>
+
+
+        <!-- =================================
+             LIVE TIMER
+        ================================== -->
+
+        <div class="timer-grid">
+
+            <div class="timer-box">
+
+                <span
+                    id="timerYears"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Years
+                </span>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                <span
+                    id="timerMonths"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Months
+                </span>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                <span
+                    id="timerWeeks"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Weeks
+                </span>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                <span
+                    id="timerDays"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Days
+                </span>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                <span
+                    id="timerHours"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Hours
+                </span>
+
+            </div>
+
+
+            <div class="timer-box">
+
+                <span
+                    id="timerMinutes"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Minutes
+                </span>
+
+            </div>
+
+
+            <div class="timer-box timer-seconds">
+
+                <span
+                    id="timerSeconds"
+                    class="timer-number"
+                >
+                    0
+                </span>
+
+                <span class="timer-unit">
+                    Seconds
+                </span>
+
+            </div>
+
+        </div>
+
+
+        <p class="timer-bottom-text">
+            And every second with you
+            is still my favourite second. ❤️
+        </p>
+
+    </div>
+
+</section>
+      <!-- =====================================
+     PART 10
+     INTERACTIVE BIRTHDAY CAKE
+====================================== -->
+
+<section
+    class="cake-section"
+    id="cakeSection"
+>
+
+    <div class="cake-bg-glow cake-bg-glow-one"></div>
+    <div class="cake-bg-glow cake-bg-glow-two"></div>
+
+
+    <!-- =================================
+         CAKE INTRO
+    ================================== -->
+
+    <div class="cake-heading">
+
+        <p class="cake-small-text">
+            One more little surprise...
+        </p>
+
+        <h2>
+            Make A Wish 🎂
+        </h2>
+
+        <p class="cake-instruction">
+            Blow the candles and make your wish 💝
+        </p>
+
+    </div>
+
+
+    <!-- =================================
+         CAKE STAGE
+    ================================== -->
+
+    <div
+        class="cake-stage"
+        id="cakeStage"
+    >
+
+        <!-- Cake -->
+
+        <div
+            class="cake"
+            id="birthdayCake"
+        >
+
+            <!-- Top -->
+
+            <div class="cake-top">
+
+                <div class="cake-writing">
+                    Pagliiii
+                </div>
+
+            </div>
+
+
+            <!-- Cream -->
+
+            <div class="cake-cream cream-one"></div>
+            <div class="cake-cream cream-two"></div>
+
+
+            <!-- Cake Body -->
+
+            <div class="cake-body">
+
+                <div class="cake-layer-line"></div>
+
+                <div class="cake-decoration">
+                    ♥ ♥ ♥
+                </div>
+
+            </div>
+
+
+            <!-- Bottom -->
+
+            <div class="cake-bottom"></div>
+
+
+            <!-- =================================
+                 CANDLES
+            ================================== -->
+
+            <div class="candles">
+
+                <div class="candle candle-one">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle-two">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle-three">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle-four">
+                    <div class="flame"></div>
+                </div>
+
+                <div class="candle candle-five">
+                    <div class="flame"></div>
+                </div>
+
+            </div>
+
+
+            <!-- =================================
+                 SMOKE
+            ================================== -->
+
+            <div class="smoke-container">
+
+                <span class="smoke smoke-one"></span>
+                <span class="smoke smoke-two"></span>
+                <span class="smoke smoke-three"></span>
+                <span class="smoke smoke-four"></span>
+                <span class="smoke smoke-five"></span>
+
+            </div>
+
+
+            <!-- =================================
+                 CAKE SLICE
+            ================================== -->
+
+            <div
+                class="cake-slice"
+                id="cakeSlice"
+            >
+
+                <div class="slice-top">
+                    Pagliiii 💜
+                </div>
+
+                <div class="slice-body"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- =================================
+             KNIFE
+        ================================== -->
+
+        <div
+            class="cake-knife"
+            id="cakeKnife"
+        >
+
+            <div class="knife-handle"></div>
+
+            <div class="knife-blade"></div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =================================
+         BLOW CONTROL
+    ================================== -->
+
+    <div
+        class="blow-control"
+        id="blowControl"
+    >
+
+        <div class="mic-icon">
+            🎙️
+        </div>
+
+        <p id="blowStatus">
+            Tap the microphone and blow 💨
+        </p>
+
+        <button
+            id="micButton"
+            class="mic-button"
+        >
+            Start Microphone
+        </button>
+
+        <button
+            id="tapBlowButton"
+            class="tap-blow-button"
+        >
+            Tap to Blow 💨
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         CAKE CUT CONTROL
+    ================================== -->
+
+    <div
+        class="cut-control"
+        id="cutControl"
+    >
+
+        <p>
+            The candles are out ❤️
+        </p>
+
+        <button
+            id="cutCakeButton"
+            class="cut-cake-button"
+        >
+            🔪 Cut the Cake
+        </button>
+
+    </div>
+
+
+    <!-- =================================
+         CAKE COMPLETE MESSAGE
+    ================================== -->
+
+    <div
+        class="cake-complete"
+        id="cakeComplete"
+    >
+
+        <div class="cake-complete-heart">
+            ❤️
+        </div>
+
+        <h3>
+            Wish made! 🥹
+        </h3>
+
+        <p>
+            tum hamesha khush raho😊
+        </p>
+
+    </div>
+
+</section>
+      <!-- =====================================
+     PART 11
+     DAISY FLOWER BOUQUET
+====================================== -->
+
+<section
+    class="bouquet-section"
+    id="bouquetSection"
+>
+
+    <div class="bouquet-glow bouquet-glow-one"></div>
+    <div class="bouquet-glow bouquet-glow-two"></div>
+
+
+    <div class="bouquet-heading">
+
+        <p class="bouquet-small-text">
+            One last thing for you...
+        </p>
+
+        <h2>
+            These Flowers Are For You 💜
+        </h2>
+
+        <p class="bouquet-subtitle">
+            A little bouquet made with love
+        </p>
+
+    </div>
+
+
+    <!-- =================================
+         BOUQUET
+    ================================== -->
+
+    <div
+        class="bouquet"
+        id="bouquet"
+    >
+
+
+        <!-- Flower 1 -->
+
+        <div class="flower flower-1">
+
+            <div class="stem"></div>
+
+            <div class="leaves">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-head">
+
+                <div class="petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flower-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Flower 2 -->
+
+        <div class="flower flower-2">
+
+            <div class="stem"></div>
+
+            <div class="leaves">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-head">
+
+                <div class="petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flower-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Flower 3 -->
+
+        <div class="flower flower-3">
+
+            <div class="stem"></div>
+
+            <div class="leaves">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-head">
+
+                <div class="petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flower-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Flower 4 -->
+
+        <div class="flower flower-4">
+
+            <div class="stem"></div>
+
+            <div class="leaves">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-head">
+
+                <div class="petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flower-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Flower 5 -->
+
+        <div class="flower flower-5">
+
+            <div class="stem"></div>
+
+            <div class="leaves">
+                <span></span>
+                <span></span>
+            </div>
+
+            <div class="flower-head">
+
+                <div class="petals">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+
+                <div class="flower-center"></div>
+
+            </div>
+
+        </div>
+
+
+        <!-- Bouquet Wrapping -->
+
+        <div class="bouquet-wrap">
+
+            <div class="wrap-top"></div>
+
+            <div class="wrap-body"></div>
+
+            <div class="wrap-ribbon">
+
+                <span></span>
+                <span></span>
+
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+    <!-- =================================
+         BOUQUET MESSAGE
+    ================================== -->
+
+    <div class="bouquet-message">
+
+        <div class="bouquet-heart">
+            ♥
+        </div>
+
+        <h3>
+            For My Pagliiii ❤️
+        </h3>
+
+        <p>
+            Just like these flowers,
+            you make my world
+            a little more beautiful.
+        </p>
+
+    </div>
+
+
+</section>
+
+
+    </main>
+
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
