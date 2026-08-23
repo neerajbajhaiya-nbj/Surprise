@@ -626,7 +626,7 @@ const memoryNextButton =
    PHOTO SETTINGS
 ========================================= */
 
-const totalPhotos = 31;
+const totalPhotos = 30;
 
 let photoIndex = 1;
 
@@ -687,10 +687,6 @@ function nextMemory() {
 
     setTimeout(function () {
 
-        /*
-         * 30 ke baad
-         * photo 1 par wapas
-         */
 
         photoIndex++;
 
