@@ -1,10 +1,4 @@
 /* =========================================
-   BIRTHDAY SURPRISE WEBSITE
-   PART 4
-========================================= */
-
-
-/* =========================================
    LOADING SCREEN
 ========================================= */
 
@@ -92,13 +86,6 @@ function typeBirthdayText() {
             startFireworks();
 
         }, 300);
-
-
-        /*
-         * Love letter section ko
-         * birthday reveal ke baad
-         * visible banayenge.
-         */
 
         setTimeout(function () {
 
@@ -536,12 +523,6 @@ function showLoveLetter() {
         "visible"
     );
 
-
-    /*
-     * User ko automatically
-     * next section par le jayenge.
-     */
-
     setTimeout(function () {
 
         loveLetterSection.scrollIntoView({
@@ -611,12 +592,6 @@ if (envelopeContainer) {
     );
 }
 
-/* ==================================================
-   PART 5
-   PHOTO MEMORIES
-================================================== */
-
-
 /* =========================================
    PHOTO ELEMENTS
 ========================================= */
@@ -651,7 +626,7 @@ const memoryNextButton =
    PHOTO SETTINGS
 ========================================= */
 
-const totalPhotos = 30;
+const totalPhotos = 31;
 
 let photoIndex = 1;
 
@@ -814,7 +789,7 @@ if (memoryPhoto) {
     );
 }
 /* ==================================================
-   PART 6
+   
    SHAYARI SECTION
 ================================================== */
 
@@ -882,7 +857,7 @@ if (shayariSection) {
 
 }
 /* ==================================================
-   PART 7
+   
    FINAL BIRTHDAY MESSAGE
 ================================================== */
 
@@ -931,12 +906,6 @@ if (finalMessageSection) {
 
                             showFinalMessage();
 
-                            /*
-                             * Ek baar visible hone
-                             * ke baad observer ko
-                             * stop kar dete hain.
-                             */
-
                             finalMessageObserver.unobserve(
                                 finalMessageSection
                             );
@@ -965,7 +934,7 @@ if (finalMessageSection) {
 
 
 /* ==================================================
-   PART 8
+
    TOTAL RELATIONSHIP TIME
 ================================================== */
 
@@ -983,17 +952,6 @@ const relationshipStart = new Date(
     0
 );
 
-
-/*
-   25 April 2024
-   12:00 PM
-
-   JavaScript mein:
-   January = 0
-   February = 1
-   March = 2
-   April = 3
-*/
 
 
 /* =========================================
@@ -1216,7 +1174,7 @@ if (timerSection) {
 }
 
 /* ==================================================
-   PART 9
+
    BACKGROUND MUSIC
 ================================================== */
 
@@ -1237,19 +1195,10 @@ const backgroundMusic =
 
 if (backgroundMusic) {
 
-    /*
-     * Volume ko soft rakha hai.
-     * Tum baad mein 0.5 - 1.0
-     * ke beech change kar sakte ho.
-     */
+    
 
     backgroundMusic.volume = 0.65;
 
-
-    /*
-     * Browser allow kare to
-     * page load ke baad music start.
-     */
 
     window.addEventListener(
         "load",
@@ -1260,12 +1209,6 @@ if (backgroundMusic) {
         }
     );
 
-
-    /*
-     * Agar browser autoplay block
-     * kar de, to user ke first
-     * interaction par music start hoga.
-     */
 
     const startOnInteraction =
         function () {
@@ -1316,11 +1259,6 @@ function startBackgroundMusic() {
     }
 
 
-    /*
-     * Agar already playing hai
-     * to dobara play nahi karenge.
-     */
-
     if (
         !backgroundMusic.paused
     ) {
@@ -1332,15 +1270,6 @@ function startBackgroundMusic() {
     const playPromise =
         backgroundMusic.play();
 
-
-    /*
-     * Kuch browsers Promise return
-     * karte hain. Rejection ko silently
-     * handle karenge because autoplay
-     * browser policy ke wajah se fail
-     * ho sakta hai.
-     */
-
     if (
         playPromise !== undefined
     ) {
@@ -1348,18 +1277,11 @@ function startBackgroundMusic() {
         playPromise.catch(
             function () {
 
-                /*
-                 * Autoplay blocked.
-                 * First user interaction
-                 * par dobara attempt hoga.
-                 */
-
             }
         );
     }
 }
 /* ==================================================
-   PART 10
    INTERACTIVE BIRTHDAY CAKE
 ================================================== */
 
@@ -1514,18 +1436,8 @@ function blowCandles() {
         "All candles are out! ❤️";
 
 
-    /*
-     * Stop microphone after
-     * successful blow.
-     */
-
     stopMicrophone();
 
-
-    /*
-     * Small delay before
-     * cake cutting control.
-     */
 
     setTimeout(
         function () {
@@ -1585,10 +1497,6 @@ async function startMicrophone() {
         return;
     }
 
-
-    /*
-     * Browser support check
-     */
 
     if (
         !navigator.mediaDevices ||
@@ -1721,13 +1629,6 @@ function detectBlow() {
         );
 
 
-    /*
-     * Blow threshold.
-     *
-     * Phone microphone ke hisaab se
-     * threshold thoda tolerant rakha hai.
-     */
-
     if (rms > 0.12) {
 
         blowCandles();
@@ -1821,20 +1722,11 @@ function cutCake() {
     );
 
 
-    /*
-     * Button disable
-     */
-
     cutCakeButton.disabled = true;
 
     cutCakeButton.textContent =
         "Cake Cut! ❤️";
 
-
-    /*
-     * Small vibration on supported
-     * mobile devices.
-     */
 
     if (
         navigator.vibrate
@@ -1846,7 +1738,7 @@ function cutCake() {
     }
 }
 /* ==================================================
-   PART 11
+   
    DAISY BOUQUET
 ================================================== */
 
