@@ -8,11 +8,9 @@
     box-sizing: border-box;
 }
 
-
 /* =========================================
    HTML + BODY
 ========================================= */
-
 html,
 body {
     width: 100%;
@@ -1596,7 +1594,6 @@ body {
 
 }
 /* ==================================================
-   PART 6
    SHAYARI SECTION
 ================================================== */
 
@@ -1900,11 +1897,6 @@ body {
         transform 1s ease;
 }
 
-
-/*
-   Lines ek-ek karke appear hongi
-*/
-
 .shayari-section.visible
 .shayari-text p:nth-child(1) {
 
@@ -2048,7 +2040,6 @@ body {
 
 }
 /* ==================================================
-   PART 7
    FINAL BIRTHDAY MESSAGE
 ================================================== */
 
@@ -2744,7 +2735,6 @@ body {
 
 }
 /* ==================================================
-   PART 8
    RELATIONSHIP TIMER
 ================================================== */
 
@@ -3294,7 +3284,6 @@ body {
 
 }
 /* ==================================================
-   PART 10
    INTERACTIVE BIRTHDAY CAKE
 ================================================== */
 
@@ -4590,7 +4579,6 @@ body {
 }
 
 /* ==================================================
-   PART 11
    BEAUTIFUL DAISY BOUQUET
 ================================================== */
 
@@ -5673,7 +5661,7 @@ body {
     }
 }
 /* ==================================================
-   PART 11 - FINAL STEM & POT FIX
+ FINAL STEM & POT FIX
 ================================================== */
 
 
@@ -5685,12 +5673,6 @@ body {
     z-index: 80;
 }
 
-
-/* ------------------------------------------
-   STEMS
-   Stems ko pot opening ke andar visible
-   rakha gaya hai.
------------------------------------------- */
 
 .flower .stem {
     z-index: 90;
@@ -5847,13 +5829,6 @@ body {
 }
 
 
-/* ------------------------------------------
-   IMPORTANT:
-   Flower layer ko pot opening ke upar
-   rakhenge, lekin sirf stems ka lower
-   portion opening mein dikhega.
------------------------------------------- */
-
 .flower-1,
 .flower-2,
 .flower-3,
@@ -5862,12 +5837,6 @@ body {
     isolation: auto;
 }
 
-
-/* ------------------------------------------
-   STEM ENDING
-   Stems opening ke andar naturally
-   terminate honge.
------------------------------------------- */
 
 .flower-1 .stem {
     height: 178px;
